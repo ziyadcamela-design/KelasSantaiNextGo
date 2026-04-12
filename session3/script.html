@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button onclick="tambah()">Tambah</button>
+    <button onclick="kurang()">Kurang</button>
+    <button onclick="kali()">Kali</button>
+    <button onclick="bagi()">Bagi</button>
+    <div id="hasil" style="margin-top: 10px; font-size: 20px;"></div>
+
+    
+
+    <script>
+
+        function tambah(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let hasil = parseInt(num1) + parseInt(num2);
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+        function kurang(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let hasil = parseInt(num1) - parseInt(num2);
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+        function kali(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let hasil = parseInt(num1) * parseInt(num2);
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+        function bagi(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let hasil = parseInt(num1) / parseInt(num2);
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+
+        let score = 32;
+        let grade = "";
+
+        if (score >= 90) {
+            grade = "A";
+        } else if (score >= 80) {
+            grade = "B";
+        } else if (score >= 70) {
+            grade = "C";
+        } else if (score >= 60) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+        switch (grade) {
+            case "A":
+                console.log("Excellent");
+                break;
+            case "B":
+                console.log("Good");
+                break;
+            case "C":
+                console.log("Average");
+                break;
+            case "D":
+                console.log("Below Average");
+                break;
+            case "F":
+                console.log("Fail");
+                break;
+        }
+
+        console.log(grade);
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+    </script>
+</body>
+</html>

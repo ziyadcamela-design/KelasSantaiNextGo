@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            grid-template-areas: 
+            "satu satu satu"
+            "dua dua tiga"
+            "empat lima enam";
+           
+        }
+        .satu{
+            background-color: red;
+            padding: 20px;
+            animation: muncul 10s ease-in-out;
+            grid-area: satu;
+        }
+        .dua{
+            background-color: green;
+            padding: 20px;
+            animation: muncul 1s ease-in-out;
+            grid-area: dua;
+        }
+        .tiga{
+            background-color: blue;
+            padding: 20px;
+            grid-area: tiga;
+        }
+        .empat{
+            background-color: yellow;
+            padding: 20px;
+            grid-area: empat;
+        }
+        .lima{
+            background-color: purple;
+            padding: 20px;
+            grid-area: lima;
+        }
+        .enam{
+            background-color: orange;
+            padding: 20px;
+            grid-area: enam;
+        }
+        @keyframes muncul {
+            from{
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid{
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                grid-template-areas: 
+                "satu"
+                "dua"
+                "tiga"
+                "empat"
+                "lima"
+                "enam";
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="grid">
+        <div class="satu">
+            <h1>hello</h1>
+        </div>
+        <div class="dua">
+            <h1>hello</h1>
+        </div>
+        <div class="tiga">
+            <h1>hello</h1>
+        </div>
+        <div class="empat">
+            <h1>hello</h1>
+        </div>
+        <div class="lima">
+            <h1>hello</h1>
+        </div>
+        <div class="enam">
+            <h1>hello</h1>
+        </div>
+    </div>
+</body>
+</html>

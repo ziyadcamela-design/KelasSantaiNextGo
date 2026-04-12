@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    color: white;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+.group {
+    display: flex;
+    gap: 10px;
+}
+
+.satu, .tiga, .empat {
+    width: 100px;
+    height: 100px;
+}
+
+.satu { background-color: red; }
+.tiga { background-color: blue; }
+.empat { background-color: yellow; }
+
+.dua {
+    flex: 1;
+    height: 100px;
+    background-color: green;
+}
+makanan = ['ayam', 'ikan', 'daging', 'sapi', 'kambing'];
+
+makanan.forEach(function(item) {
+    console.log(item);
+});
+
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+    <div>
+        <h1>Logo</h1>
+    </div>
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</div>
+
+<div class="group">
+    <div class="satu"></div>
+    <div class="dua"></div>
+    <div class="tiga"></div>
+    <div class="empat"></div>
+</div>
+
+</body>
+</html>
